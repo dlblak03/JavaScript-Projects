@@ -1,0 +1,32 @@
+<!--Calculates the total legs within a farmers animals-->
+<html>
+    <script>
+        var chickens = prompt('How many chickens do you have?');
+        var cows = prompt('How many cows do you have?');
+        var pigs = prompt('How many pigs do you have?');
+
+        if(chickens == null){
+            chickens = 0;
+        }
+        if(cows == null){
+            cows = 0;
+        }
+        if(pigs == null){
+            pigs = 0;
+        }
+
+        var total_legs = legs(chickens, cows, pigs);
+       
+        function legs(c, cw, p){
+            var chickenlegs = c * 2;
+            var cowlegs = cw * 4;
+            var piglegs = p * 4;
+
+            var all_legs = chickenlegs + cowlegs + piglegs;
+
+            return all_legs;
+        }
+
+        document.write(total_legs);
+    </script>
+</html>

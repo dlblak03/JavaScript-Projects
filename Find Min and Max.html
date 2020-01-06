@@ -1,0 +1,52 @@
+<!--Finds the min and max values of an array of numbers-->
+<html>
+    <script>
+        var numbers = [60, 25, 23, 6, 30, 2, 100];
+
+        var minvalue = findmin(numbers);
+        var maxvalue = findmax(numbers);
+
+        function findmin(x){
+            var min = x[0];
+            var compare;
+
+            for(var i = 0; i < x.length - 1; i++){
+                if(x[i] < x[i + 1]){
+                    compare = x[i];
+                }
+                else{
+                    compare = x[i + 1];
+                }
+
+                if(compare < min){
+                    min = compare;
+                }
+            }
+
+            return min;
+        }
+
+        function findmax(y){
+            var max = y[0];
+            var compare;
+
+            for(var i = 0; i < y.length - 1; i++){
+                if(y[i] > y[i + 1]){
+                    compare = y[i];
+                }
+                else{
+                    compare = y[i + 1];
+                }
+
+                if(compare > max){
+                    max = compare;
+                }
+            }
+
+            return max;
+        }
+
+        document.write("Min Value: " + minvalue + " Max Value: " + maxvalue);
+    </script>
+</html>
+
