@@ -1,0 +1,22 @@
+<html>
+    <script> 
+        var num = prompt("What number would you like to find the multiples of?");
+        var length = prompt("How many multiples would you like to find?");
+
+        var multiples = arrayOfMultiples(num, length);
+
+        function arrayOfMultiples(x, y){
+            var array = [];
+
+            for(var i = 1; i <= y; i++){
+                var add = i * x;
+
+                array.push(add);
+            }
+
+            return array;
+        }
+
+        document.write(multiples);
+     </script>
+<html>
