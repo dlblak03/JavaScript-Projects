@@ -1,0 +1,38 @@
+<html>
+    <script>
+        var coins = [13, 3, 12, 9];
+
+        var enough = changeEnough(coins, 4.25);
+
+        function changeEnough(x, y){
+            var quarters = x[0];
+            var dime = x[1];
+            var nickel = x[2];
+            var penny = x[3];
+
+            quarters = quarters * 0.25;
+            dime = dime * 0.10
+            nickel = nickel * 0.05;
+            penny = penny * 0.01;
+
+            var totalamount = quarters + dime + nickel + penny;
+            var totalrounded = totalamount.toFixed(2);
+
+            document.write("Your total change is " + totalrounded);
+
+            if(totalamount >= y){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        if(enough){
+            document.write(" You have enough change");
+        }
+        else{
+            document.write(" You do not have enough change");
+        }
+    </script>
+</html>
